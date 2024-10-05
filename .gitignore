@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Ambiente virtual
+venv/
+instance/
+
+# Docker
+*.log
+*.tar
+*.gz
+Dockerfile
+docker-compose.yml
+
+# Editor de texto
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
