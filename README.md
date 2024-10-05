@@ -74,7 +74,7 @@ Este endpoint retorna uma lista de todos os veículos registrados na base de dad
 }
 ```
 ### 2. Adicionar um novo veículo
-```
+```http
 POST /vehicles
 ```
 Este endpoint permite adicionar um novo veículo. O corpo da requisição deve conter os seguintes campos:
@@ -99,7 +99,7 @@ Este endpoint permite adicionar um novo veículo. O corpo da requisição deve c
 ```
 
 ### 3. Atualizar informações de um veículo
-```
+```http
 PUT /vehicles/<int:id>
 ```
 susbtítua o ```<int:id>``` para o número de um index.
@@ -123,7 +123,7 @@ Este endpoint atualiza as informações de um veículo existente. O id do veícu
 ```
 
 ### 4. Deletar um veículo
-```
+```http
 DELETE /vehicles/<int:id>
 ```
 susbtítua o ```<int:id>``` para o número de um index.
