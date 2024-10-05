@@ -2,14 +2,14 @@
 
 Esta é uma API simples para gerenciar informações sobre veículos, construída com Flask e PostgreSQL. A API permite adicionar, visualizar, atualizar e excluir registros de veículos.
 
-## Tecnologias Utilizadas
+## ⚡Tecnologias Utilizadas
 
 - Python 3.10
 - Flask
 - PostgreSQL
 - Docker
 
-## Requisitos
+## ✅Requisitos
 - Python3
 - Flask
 - PostgreSQL
@@ -26,7 +26,7 @@ Senha: ```postgress```
 
 
 
-## Como Executar o Projeto
+## 🚀Como Executar o Projeto
 
 ### Usando Docker
 
@@ -43,7 +43,7 @@ Senha: ```postgress```
 
 A API estará disponível em `http://127.0.0.1:5000`.
 
-## Endpoints da API
+## 🌐Endpoints da API
 
 A API fornece os seguintes endpoints para gerenciar veículos:
 
@@ -55,7 +55,7 @@ GET /vehicles
 Este endpoint retorna uma lista de todos os veículos registrados na base de dados.
 
 **Exemplo de resposta:**
-```
+```json
 {
     "vehicles": [
         {
@@ -84,7 +84,7 @@ Este endpoint permite adicionar um novo veículo. O corpo da requisição deve c
 ```year```: Ano do veículo
 
 **Exemplo de corpo da requisição:**
-```
+```json
 {
     "make": "Fabrica",
     "model": "Modelo Z",
@@ -92,7 +92,7 @@ Este endpoint permite adicionar um novo veículo. O corpo da requisição deve c
 }
 ```
 **Exemplo de resposta:**
-```
+```json
 {
     "id": 3
 }
@@ -107,7 +107,7 @@ susbtítua o ```<int:id>``` para o número de um index.
 Este endpoint atualiza as informações de um veículo existente. O id do veículo deve ser passado na URL, e o corpo da requisição pode conter os campos a serem atualizados.
 
 **Exemplo de corpo da requisição:**
-```
+```json
 {
     "make": "Nova Fabrica",
     "model": "Modelo Atualizado",
@@ -116,7 +116,7 @@ Este endpoint atualiza as informações de um veículo existente. O id do veícu
 ```
 
 **Exemplo de resposta:**
-```
+```json
 {
     "message": "Vehicle updated"
 }
@@ -130,9 +130,8 @@ susbtítua o ```<int:id>``` para o número de um index.
 Este endpoint remove um veículo da base de dados. O id do veículo deve ser passado na URL.
 
 **Exemplo de resposta:**
-```
+```json
 {
     "message": "Vehicle deleted"
 }
 ```
-
