@@ -1,4 +1,4 @@
-# API de Gerenciamento de Veículos
+# API de Gerenciamento de Veículos (Em Desenvolvimento ⚠️)
 
 Esta é uma API simples para gerenciar informações sobre veículos, construída com Flask e PostgreSQL. A API permite adicionar, visualizar, atualizar e excluir registros de veículos.
 
