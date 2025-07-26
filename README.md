@@ -1,56 +1,67 @@
-# API de Gerenciamento de Veículos (Em Desenvolvimento ⚠️)
+# API de Gerenciamento de Veículos 
 
-Esta é uma API simples para gerenciar informações sobre veículos, construída com Flask e PostgreSQL. A API permite adicionar, visualizar, atualizar e excluir registros de veículos.
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow) 
+![Tecnologias](https://img.shields.io/badge/tech-Python%20|%20Flask%20|%20PostgressSQL%20|%20Docker-blue) 
+![License](https://img.shields.io/badge/license-MIT-green)
 
-## ⚡Tecnologias Utilizadas
+Esta é uma API simples para gerenciar informações sobre veículos, construída com Python, Flask, PostgreSQL e Docker. A API permite adicionar, **visualizar**, **atualizar** e **excluir** registros de veículos.
 
-- Python 3.10
-- Flask
+## 📌 Índice
+
+- [**Tecnologias Utilizadas**](#tecnologias-utilizadas)
+- [**Como Executar**](#como-executar)
+- [**Endpoints da API**](#endpoints-da-api)
+    - [**GET** : Obter todos os veículos](#get)
+    - [**POST** : Adicionar um novo veículo](#post)
+    - [**PUT** : Atualizar informações de um veículo](#put)
+    - [**DELETE** : Deletar um veículo](#delete)
+    
+
+## <a id="tecnologias-utilizadas"></a> 🛠️ Tecnologias Utilizadas
+
+- Python
 - PostgreSQL
 - Docker
 
-## ✅Requisitos
-- Python3
-- Flask
-- PostgreSQL
-- Docker
 
-#### Configuração do Banco de Dados
-Para configurar o banco de dados PostgreSQL, siga estas etapas:
+## <a id="como-executar"></a> 🚀Como Executar o Projeto
 
-**Crie um banco de dados PostgreSQL:**
+### Pré-requisitos:
+- **Docker**: Para executar o projeto .
+- **Insomnia ou similar**: Para fazer os diferentes tipos de requisição
 
-Nome do banco de dados: ```nome_do_banco```
-Usuário: ```postgres```
-Senha: ```postgress```
+### 1. Clone o repositório
 
+Primeiro, clone este repositório para a sua máquina:
 
+```bash
+git clone https://github.com/[seu-usuario]/gestao-pizzaria.git
 
-## 🚀Como Executar o Projeto
+```
+Navegue até a raiz do projeto
+```bash
+cd veiculos-api
+```
 
 ### Usando Docker
 
 1. **Certifique-se de ter o Docker e o Docker Compose instalados.**
-2. **Navegue até o diretório do projeto:**
-   ```bash
-   cd /veiculos-api
-   ```
 
-3. **Execute o seguinte comando para construir e iniciar os containers:**
+2. **Execute o seguinte comando para construir e iniciar os containers:**
    ```bash
    sudo docker-compose up --build
    ```
 
-A API estará disponível em `http://127.0.0.1:5000`.
+A API estará disponível em `http://127.0.0.1:5000/vehicles`.
 
-## 🌐Endpoints da API
+## <a id="endpoints-da-api"></a> 🌐 Endpoints da API
 
-A API fornece os seguintes endpoints para gerenciar veículos:
+Você pode testar todos os endpoints usando o **Insomnia** ou ferramentas similares como Postman. Abaixo estão os detalhes de cada operação:
 
-### 1. Obter todos os veículos
+### <a id="get"></a> 1. Obter todos os veículos
 
 ```http
-GET /vehicles
+GET: http://127.0.0.1:5000/vehicles
 ```
 Este endpoint retorna uma lista de todos os veículos registrados na base de dados.
 
@@ -73,9 +84,9 @@ Este endpoint retorna uma lista de todos os veículos registrados na base de dad
     ]
 }
 ```
-### 2. Adicionar um novo veículo
+### <a id="post"></a> 2. Adicionar um novo veículo
 ```http
-POST /vehicles
+POST: http://127.0.0.1:5000/vehicles
 ```
 Este endpoint permite adicionar um novo veículo. O corpo da requisição deve conter os seguintes campos:
 
@@ -98,9 +109,9 @@ Este endpoint permite adicionar um novo veículo. O corpo da requisição deve c
 }
 ```
 
-### 3. Atualizar informações de um veículo
+### <a id="put"></a> 3. Atualizar informações de um veículo
 ```http
-PUT /vehicles/<int:id>
+PUT: http://127.0.0.1:5000/vehicles/<int:id>
 ```
 susbtítua o ```<int:id>``` para o número de um index.
 
@@ -122,9 +133,9 @@ Este endpoint atualiza as informações de um veículo existente. O id do veícu
 }
 ```
 
-### 4. Deletar um veículo
+### <a id="delete"></a> 4. Deletar um veículo
 ```http
-DELETE /vehicles/<int:id>
+DELETE: http://127.0.0.1:5000/vehicles<int:id>
 ```
 susbtítua o ```<int:id>``` para o número de um index.
 Este endpoint remove um veículo da base de dados. O id do veículo deve ser passado na URL.

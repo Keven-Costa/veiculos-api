@@ -45,7 +45,12 @@ def delete_vehicle(id):
     db.session.commit()
     return {'message': 'Vehicle deleted'}
 
-if __name__ == '__main__':
+
+def create_tables():
     with app.app_context():
-        db.create_all()  # Cria as tabelas no banco de dados
-    app.run(debug=True)
+        db.create_all()
+        print("Tabelas criadas com sucesso!")
+
+if __name__ == '__main__':
+    create_tables()
+    app.run(host='0.0.0.0', debug=True)
